@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Midterm term activity output page.">
+    <title>Midterm Activity | Academic E-Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="midterm.css">
+</head>
+<body class="midterm-body">
+    <header class="midterm-nav">
+        <a class="midterm-logo" href="../index.html">YVONNE<span>.</span></a>
+        <nav aria-label="Primary navigation">
+            <a href="../index.html">Home</a>
+            <a href="../Prelim/Prelim.html">Prelim</a>
+            <a class="active" href="Midterm.html">Midterm</a>
+        </nav>
+    </header>
+
+    <main class="activity-page">
+        <div class="detail-top">
+            <p class="midterm-kicker">MIDTERM TERM</p>
+            <div class="detail-heading">
+                <h1 id="activity-title"></h1>
+                <a class="back-button" href="Midterm.html">← Back</a>
+            </div>
+            <p class="detail-date" id="activity-date"></p>
+        </div>
+        <article class="detail-panel">
+            <p id="activity-description"></p>
+            <p class="author"><strong>Author:</strong> Lyona Yvonne Sayat</p>
+            <section class="output-block" id="week-8-outputs" hidden>
+                <h2>Submitted Outputs</h2>
+                <h3>Microsoft Teams Submission Screenshot</h3>
+                <div class="submission-slot" aria-label="Microsoft Teams submission screenshot to be added later"></div>
+
+                <h3>Google Colab Notebook</h3>
+                <div class="file-card">
+                    <strong>PT_M1_Sayat_Lyona.ipynb</strong>
+                    <a class="file-link" href="Files/PT_M1_Sayat_Lyona.ipynb" download>PT_M1_Sayat_Lyona.ipynb ↓</a>
+                    <a class="file-link" href="https://colab.research.google.com/drive/1hN8EX7HPUY8wMzpRjRo4v5vYKYdeivKX?usp=sharing" target="_blank" rel="noopener">Open in Google Colab ↗</a>
+                </div>
+
+                <h3>IEEE Research Paper (PT_M1_Sayat_Lyona)</h3>
+                <p class="file-name">PT_M1_Sayat_Lyona.pdf</p>
+                <iframe class="pdf-preview" src="Files/PT_M1_Sayat_Lyona.pdf" title="PT_M1_Sayat_Lyona IEEE research paper" loading="lazy"></iframe>
+                <a class="document-link" href="Files/PT_M1_Sayat_Lyona.pdf" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>
+                <a class="document-link" href="Files/PT_M1_Sayat_Lyona.pdf" download>Download PT_M1_Sayat_Lyona.pdf ↧</a>
+            </section>
+            <section class="reflection" id="week-8-reflection" hidden>
+                <h2>Learning Reflection</h2>
+                <p id="reflection-text"></p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="midterm-footer"><p>© 2026 Lyona Yvonne Sayat | Academic E-Portfolio</p></footer>
+
+    <script>
+        const activities = {
+            7: { week: "WEEK 07", title: "", date: "" },
+            8: {
+                week: "WEEK 08",
+                title: "Kick off with LLM and LLM Ops",
+                date: "Aug 31 – Sep 5",
+                description: "This activity presents the development and evaluation of a domain-specific RAG chatbot. The submitted notebook documents the chatbot setup, custom document loading and chunking, embedding and vector database indexing, language-model prompting, retrieval-chain assembly, and tests for in-domain responses, out-of-domain fallback behavior, and hallucination stress testing.",
+                reflection: "Through this activity, I became more familiar with how a RAG-based chatbot uses external information to generate its responses. I learned that the chatbot does not depend only on the language model because it can also refer to relevant information from a connected knowledge source. Seeing how these parts work together helped me better understand the process behind generating answers that are related to a user's query.\n\nThe activity also showed me how important it is to organize and retrieve the right information before passing it to the language model. Even if a chatbot can generate responses, the information provided as context plays an important role in making those responses useful. This activity gave me a better understanding of how information retrieval and response generation work together in a RAG-based chatbot. It also helped me recognize the importance of providing relevant information as context so the chatbot can produce more appropriate answers to user questions."
+            },
+            9: { week: "WEEK 09", title: "RAG-based Research Proposal", date: "Sep 7 – Sep 12" },
+            10: { week: "WEEK 10", title: "Building a Reliable Data Collection", date: "Sep 14 – Sep 19" },
+            11: { week: "WEEK 11", title: "Final Project Presentation", date: "Sep 21 – Sep 26" },
+            12: { week: "WEEK 12", title: "Data Chunking with Midterm Exam", date: "Sep 28 – Oct 03" },
+            13: { week: "WEEK 13", title: "Midterm Exam", date: "Oct 5 – Oct 10" }
+        };
+
+        const weekNumber = Number(new URLSearchParams(window.location.search).get("week"));
+        const activity = activities[weekNumber] || activities[7];
+        document.title = `${activity.week} | Academic E-Portfolio`;
+        document.querySelector(".midterm-kicker").textContent = activity.week;
+        document.getElementById("activity-title").textContent = activity.title;
+        document.getElementById("activity-date").textContent = activity.date;
+        if (weekNumber === 8) {
+            document.getElementById("activity-description").textContent = activity.description;
+            document.getElementById("week-8-outputs").hidden = false;
+            document.getElementById("week-8-reflection").hidden = false;
+            document.getElementById("reflection-text").textContent = activity.reflection;
+        }
+    </script>
+</body>
+</html>

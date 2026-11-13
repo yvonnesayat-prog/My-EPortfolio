@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Output | Academic E-Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="prelim.css">
+    <style>
+        .activity-page { width: min(100% - 40px, 900px); margin: 0 auto; padding: 70px 0 90px; }
+        .detail-top { margin-bottom: 42px; }
+        .detail-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+        .detail-top h1 { margin: 12px 0 18px; color: #fff; font-size: clamp(32px, 5vw, 58px); line-height: 1.1; }
+        .detail-date { color: #94a3b8; font-size: 14px; }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 92px;
+            margin-top: 14px;
+            padding: 11px 18px;
+            border: 1px solid #38bdf8;
+            border-radius: 7px;
+            background: rgba(56, 189, 248, .08);
+            color: #7dd3fc;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .2s ease, color .2s ease, transform .2s ease;
+        }
+        .back-button:hover, .back-button:focus-visible { background: #38bdf8; color: #07111f; transform: translateY(-2px); }
+        .detail-panel { padding: clamp(24px, 5vw, 48px); border: 1px solid #233b54; border-radius: 16px; background: linear-gradient(145deg, #111f33, #0d1727); }
+        .detail-panel h2 { margin: 28px 0 8px; color: #7dd3fc; font-size: 20px; }
+        .detail-panel h2:first-child { margin-top: 0; }
+        .detail-panel p { color: #cbd5e1; }
+        .author { color: #94a3b8; font-size: 14px; margin-top: 26px; }
+        .author strong { color: #e2e8f0; }
+        .detail-image { display: block; width: 100%; max-height: 680px; margin: 18px 0; border: 1px solid #2c4962; border-radius: 9px; object-fit: contain; background: #0a1321; }
+        .output-block { margin-top: 28px; }
+        .pdf-preview { width: 100%; height: 680px; margin: 18px 0 28px; border: 1px solid #2c4962; border-radius: 9px; background: #fff; }
+        .document-link { display: inline-block; margin: 5px 10px 10px 0; color: #7dd3fc; font-weight: 700; text-decoration: none; }
+        .document-link:hover { color: #38bdf8; text-decoration: underline; }
+        .reflection { margin-top: 34px; padding: 20px 24px; border-left: 3px solid #38bdf8; background: rgba(56,189,248,.07); }
+        .reflection h2 { margin-top: 0; }
+        .reflection p { margin-bottom: 14px; }
+        .reflection p:last-child { margin-bottom: 0; }
+        .empty-output { padding: 15px 18px; border: 1px dashed #46617a; color: #94a3b8; }
+        @media (max-width: 600px) {
+            .activity-page { width: min(100% - 28px, 900px); padding-top: 45px; }
+            .detail-heading { gap: 4px; }
+            .detail-heading .back-button { margin-top: 0; }
+            .pdf-preview { height: 480px; }
+        }
+    </style>
+</head>
+<body class="prelim-body">
+    <header class="prelim-nav">
+        <a class="prelim-logo" href="../index.html">YVONNE<span>.</span></a>
+        <nav aria-label="Primary navigation">
+            <a class="active" href="Prelim.html">Prelim</a>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <main class="activity-page">
+        <div class="detail-top">
+            <p class="prelim-kicker" id="week-label">PRELIM TERM</p>
+            <div class="detail-heading">
+                <h1 id="activity-title">Activity Output</h1>
+                <a class="back-button" href="Prelim.html">← Back</a>
+            </div>
+            <p class="detail-date" id="activity-date"></p>
+        </div>
+        <article class="detail-panel" id="activity-content"></article>
+    </main>
+    <footer class="prelim-footer"><p>© 2026 Lyona Yvonne Sayat | Academic E-Portfolio</p></footer>
+    <script>
+        const activities = {
+            1: {
+                week: "WEEK 01", date: "July 17, 2026", title: "WW-P1: ePortfolio – Readings and Expectations",
+                description: "This output shows my initial work and understanding of the ePortfolio requirements. It helped me understand how the ePortfolio should be organized and what outputs and reflections should be included.",
+                images: [["Screenshots/week01-ww-p1.png", "Week 1 ePortfolio Readings and Expectations submission screenshot"]],
+                reflection: [
+                    "During Week 1, I learned the importance of creating an ePortfolio to organize and present my academic work. At first, I found it challenging to arrange the pages and choose a clean design. I also had to make sure that the navigation, layout, text, and multimedia were easy to understand and use.",
+                    "This activity helped me realize that an ePortfolio is not only for submitting requirements but also for showing my skills, progress, and learning experiences. I improved my organization, creativity, and digital skills. Moving forward, I will continue improving my ePortfolio by adding more meaningful outputs and reflections throughout the course."
+                ]
+            },
+            2: {
+                week: "WEEK 02", date: "July 23, 2026", title: "WW-P2: Introduction to NLP Concepts",
+                description: "This output presents my introduction to Natural Language Processing (NLP) concepts and basic NLP research. It helped me understand how computers can process and work with human language and gave me a better understanding of the importance of NLP in different applications.",
+                images: [["Screenshots/WW-P2_Introduction to NLP Concepts.png", "Week 2 Introduction to NLP Concepts activity"], ["Screenshots/Module Completed_SAYAT.png", "Week 2 Microsoft Learn Module Completion"]],
+                documents: [["Files/Microsoft-Learn-Transcript..pdf", "Microsoft Learn Transcript"], ["Files/WW-P2-NLP-Concepts.pdf", "WW-P2: Introduction to NLP Concepts"]],
+                reflection: [
+                    "In the Week 2 activity, I learned the basic concepts of Natural Language Processing (NLP) through the Microsoft Learn module. At first, I only knew that NLP was related to AI and language. Through the activities, I learned how AI can summarize text, detect languages, and identify personal information. I also learned about tokenization, TF-IDF, word embeddings, and context vectors.",
+                    "The hands-on activities helped me understand the lessons better because I was able to see how NLP works using real examples. I also learned that NLP can be useful for chatbots, translation, text analysis, and other AI applications. Completing the module and passing the assessment helped me understand the basic concepts of NLP better."
+                ]
+            },
+            3: {
+                week: "WEEK 03", date: "July 30, 2026", title: "Exercise PT-P1: Deep Learning (Neural Networks)",
+                description: "This output shows my work on deep learning and neural networks. It helped me understand how a neural network can be trained and tested and how the results can be evaluated using accuracy.",
+                images: [["Screenshots/week03-submission.png", "Week 3 Microsoft Teams Classwork submission screenshot"], ["Screenshots/week03-model.png", "Week 3 trained machine learning model from Machine Learning for Kids"]],
+                documents: [["Files/Exercise PT_P1_SAYAT.pdf", "Exercise PT_P1_SAYAT.pdf", "pdf"], ["Files/Exercise PTP1_SAYAT.xlsx", "Exercise PTP1_SAYAT.xlsx", "file"]],
+                reflection: [
+                    "Learning about machine learning through this activity helped me understand how a model can learn from examples. I created a text classification model that could identify customer feedback as Positive_Praise, Negative_Complaint, or Urgent_Support.",
+                    "At first, I learned that the model did not always give the correct result because some examples were not enough for it to understand the difference between a complaint and an urgent support request. Testing the model helped me understand why training data is important. The model first got 80% accuracy, but after adding more examples for customer complaints and training the model again, it reached 100% accuracy.",
+                    "This showed me that adding better and more varied examples can help the model make better predictions. I also learned that machine learning can be different from using simple rules because the model learns patterns from the examples given to it."
+                ]
+            },
+            4: {
+                week: "WEEK 04", date: "August 5, 2026", title: "PT-P2: Neural Network Training and Testing (HyperParameters)",
+                description: "This output shows my work on neural network training and testing using different hyperparameters. It helped me understand how hyperparameters can affect the training and testing process and how the results can be evaluated.",
+                images: [["Screenshots/week04-submission.png", "Week 4 Microsoft Teams Classwork submission screenshot"]],
+                documents: [["Files/Lyona Yvonne_FFBP_Training_Log_Template.xlsx", "Lyona Yvonne_FFBP_Training_Log_Template.xlsx", "file"], ["Files/Lyona_Yvonne_Neural_Network_Training_Testing_ipynb.ipynb", "Lyona_Yvonne_Neural_Network_Training_Testing_ipynb.ipynb", "file"], ["Files/Lyona Yvonne_IEEE_Report.pdf", "Lyona Yvonne_IEEE_Report.pdf", "pdf"]],
+                reflection: [
+                    "This activity helped me understand how a neural network learns from training data and makes predictions. I worked with a text classification model that was tested using different settings such as learning rate, hidden neurons, dropout, and training data.",
+                    "At first, I found it difficult to understand why the model could perform differently even when the same type of task was used. By testing different experiments, I learned about underfitting and overfitting and how they can affect the model.",
+                    "I also learned that the quality and amount of training data are important for getting better results. One thing I noticed was that adding more training examples helped improve the model's performance. The activity also helped me understand the importance of checking the training and validation loss instead of looking only at the accuracy."
+                ]
+            },
+            5: {
+                week: "WEEK 05", date: "August 13, 2026", title: "Long Quiz Week",
+                description: "This activity documents my participation in the Week 5 Long Quiz as part of my academic assessments for the Preliminary Term.",
+                images: [["Screenshots/week05-long-quiz.png", "Week 5 Long Quiz Week activities screenshot"]],
+                reflection: [
+                    "The Prelim Long Quiz helped me evaluate how well I understood the lessons discussed throughout the Preliminary Term. Preparing for the assessment allowed me to revisit the topics and recall the knowledge I gained from our previous activities. It also helped me recognize which concepts I was already familiar with and which ones I still needed to study further. Through this experience, I became more aware of my learning progress and the importance of reviewing lessons regularly, especially in preparation for the Preliminary Examination."
+                ]
+            },
+            6: {
+                week: "WEEK 06", date: "August 24, 2026", title: "Prelim Examination",
+                description: "This output documents my participation in the Preliminary Examination for Week 6.",
+                images: [["Screenshots/week06-examination-book.png", "Prelim Examination book cover photo"]],
+                reflection: [
+                    "The Prelim Examination served as the formal assessment following the learning activities and long quiz completed during the Preliminary Term. Preparing for the examination encouraged me to review the concepts covered throughout the period and connect the different topics discussed in class. It also provided an opportunity to evaluate my overall understanding of the lessons before moving forward to the next term."
+                ]
+            }
+        };
+        const params = new URLSearchParams(window.location.search);
+        const weekNumber = Number(params.get("week"));
+        const activity = activities[weekNumber] || activities[1];
+        document.title = `${activity.title} | Academic E-Portfolio`;
+        document.getElementById("week-label").textContent = activity.week;
+        document.getElementById("activity-title").textContent = activity.title;
+        document.getElementById("activity-date").textContent = activity.date;
+        const content = document.getElementById("activity-content");
+        let html = `<p>${activity.description}</p><p class="author"><strong>Author:</strong> Lyona Yvonne Sayat</p>`;
+        if (activity.images) {
+            html += `<div class="output-block"><h2>Submitted Outputs</h2>`;
+            activity.images.forEach(([src, alt]) => { html += `<img class="detail-image" src="${src}" alt="${alt}">`; });
+            html += `</div>`;
+        }
+        if (activity.documents) {
+            html += activity.images ? `<div class="output-block">` : `<div class="output-block"><h2>Submitted Outputs</h2>`;
+            activity.documents.forEach(([src, label, type = "pdf"]) => {
+                if (type === "pdf") {
+                    html += `<h3>${label}</h3><iframe class="pdf-preview" src="${src}" title="${label}" loading="lazy"></iframe><a class="document-link" href="${src}" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>`;
+                } else {
+                    html += `<h3>${label}</h3><a class="document-link" href="${src}" download>${label} ↧</a>`;
+                }
+            });
+            html += `</div>`;
+        }
+        if (activity.empty) html += `<div class="empty-output">Submitted output to be added.</div>`;
+        if (activity.reflection) {
+            html += `<section class="reflection"><h2>Learning Reflection</h2>`;
+            activity.reflection.forEach(paragraph => { html += `<p>${paragraph}</p>`; });
+            html += `</section>`;
+        } else html += `<section class="reflection"><h2>Learning Reflection</h2><p>No learning reflection has been submitted for this activity yet.</p></section>`;
+        content.innerHTML = html;
+    </script>
+</body>
+</html>
