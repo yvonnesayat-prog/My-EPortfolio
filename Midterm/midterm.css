@@ -61,6 +61,8 @@
 .output-block h3 { margin: 24px 0 8px; color: #e2e8f0; font-size: 16px; }
 .file-name { color: #7dd3fc !important; font-size: 14px; font-weight: 700; }
 .submission-slot { min-height: 110px; border: 1px dashed #46617a; border-radius: 7px; }
+.submission-image { display: block; width: 100%; height: auto; margin: 18px 0 12px; border: 1px solid #2c4962; border-radius: 9px; }
+.slides-preview, .document-preview { display: block; width: 100%; height: 680px; margin: 18px 0 12px; border: 1px solid #2c4962; border-radius: 9px; background: #fff; }
 .file-card { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
 .file-card strong { color: #e2e8f0; font-size: 16px; }
 .file-link { color: #38bdf8; font-weight: 700; text-decoration: none; }
@@ -85,4 +87,5 @@
     .detail-heading { gap: 4px; }
     .detail-heading .back-button { margin-top: 0; }
     .pdf-preview { height: 480px; }
+    .slides-preview, .document-preview { height: 480px; }
 }

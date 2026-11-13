@@ -20,7 +20,6 @@
 
     <main class="activity-page">
         <div class="detail-top">
-            <p class="midterm-kicker">MIDTERM TERM</p>
             <div class="detail-heading">
                 <h1 id="activity-title"></h1>
                 <a class="back-button" href="Midterm.html">← Back</a>
@@ -29,7 +28,7 @@
         </div>
         <article class="detail-panel">
             <p id="activity-description"></p>
-            <p class="author"><strong>Author:</strong> Lyona Yvonne Sayat</p>
+            <p class="author"><strong>Author:</strong> <span id="author-name">Lyona Yvonne Sayat</span></p>
             <section class="output-block" id="week-8-outputs" hidden>
                 <h2>Submitted Outputs</h2>
                 <h3>Microsoft Teams Submission Screenshot</h3>
@@ -48,6 +47,41 @@
                 <a class="document-link" href="Files/PT_M1_Sayat_Lyona.pdf" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>
                 <a class="document-link" href="Files/PT_M1_Sayat_Lyona.pdf" download>Download PT_M1_Sayat_Lyona.pdf ↧</a>
             </section>
+            <section class="output-block" id="week-9-outputs" hidden>
+                <h2>Submitted Outputs</h2>
+                <h3>Microsoft Teams/Classwork Submission</h3>
+                <div class="submission-slot" aria-label="Week 2 Microsoft Teams or Classwork submission screenshot to be added"></div>
+            </section>
+            <section class="output-block" id="week-10-outputs" hidden>
+                <h2>Submitted Outputs</h2>
+                <img class="submission-image" src="Files/week10-teams-submission.png" alt="Week 10 Microsoft Teams assignment submission screenshot">
+
+                <h3>PowerPoint Presentation</h3>
+                <p class="file-name">ByteGuard - LinkWise (3).pptx</p>
+                <iframe class="slides-preview" src="https://docs.google.com/presentation/d/1BQgnnFrfMn29GmdU2HFriTeK0cqUvPkB0uJh2YOXIt4/embed" title="ByteGuard LinkWise PowerPoint presentation preview" loading="lazy"></iframe>
+                <a class="document-link" href="Files/ByteGuard%20-%20LinkWise%20(3).pptx" download>Download ByteGuard - LinkWise (3).pptx ↧</a>
+
+                <h3>IEEE Research Paper</h3>
+                <p class="file-name">ByteGuard_IEEE.pdf</p>
+                <iframe class="pdf-preview" src="Files/ByteGuard_IEEE.pdf" title="ByteGuard IEEE research paper PDF preview" loading="lazy"></iframe>
+                <a class="document-link" href="Files/ByteGuard_IEEE.pdf" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>
+                <a class="document-link" href="Files/ByteGuard_IEEE.pdf" download>Download ByteGuard_IEEE.pdf ↧</a>
+            </section>
+            <section class="output-block" id="week-11-outputs" hidden>
+                <h2>Submitted Outputs</h2>
+                <h3>Microsoft Teams Submission Screenshot</h3>
+                <img class="submission-image" src="Files/week11-teams-submission.png" alt="WW-M2 Extension updated proposal Microsoft Teams submission screenshot">
+
+                <h3>Updated Research Proposal PDF</h3>
+                <p class="file-name">ByteGuard_Revise Proposal.pdf</p>
+                <iframe class="pdf-preview" src="Files/ByteGuard_Revise%20Proposal.pdf" title="ByteGuard revised proposal PDF preview" loading="lazy"></iframe>
+                <a class="document-link" href="Files/ByteGuard_Revise%20Proposal.pdf" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>
+                <a class="document-link" href="Files/ByteGuard_Revise%20Proposal.pdf" download>Download ByteGuard_Revise Proposal.pdf ↧</a>
+            </section>
+            <section class="output-block" id="week-12-outputs" hidden>
+                <h2>Submitted Outputs</h2>
+                <img class="submission-image" src="Files/midterm-examination-book.png" alt="Midterm examination book cover">
+            </section>
             <section class="reflection" id="week-8-reflection" hidden>
                 <h2>Learning Reflection</h2>
                 <p id="reflection-text"></p>
@@ -59,30 +93,75 @@
 
     <script>
         const activities = {
-            7: { week: "WEEK 07", title: "", date: "" },
             8: {
-                week: "WEEK 08",
-                title: "Kick off with LLM and LLM Ops",
-                date: "Aug 31 – Sep 5",
+                title: "PT-M1: Building & Evaluating a RAG Chatbot",
+                date: "",
                 description: "This activity presents the development and evaluation of a domain-specific RAG chatbot. The submitted notebook documents the chatbot setup, custom document loading and chunking, embedding and vector database indexing, language-model prompting, retrieval-chain assembly, and tests for in-domain responses, out-of-domain fallback behavior, and hallucination stress testing.",
                 reflection: "Through this activity, I became more familiar with how a RAG-based chatbot uses external information to generate its responses. I learned that the chatbot does not depend only on the language model because it can also refer to relevant information from a connected knowledge source. Seeing how these parts work together helped me better understand the process behind generating answers that are related to a user's query.\n\nThe activity also showed me how important it is to organize and retrieve the right information before passing it to the language model. Even if a chatbot can generate responses, the information provided as context plays an important role in making those responses useful. This activity gave me a better understanding of how information retrieval and response generation work together in a RAG-based chatbot. It also helped me recognize the importance of providing relevant information as context so the chatbot can produce more appropriate answers to user questions."
             },
-            9: { week: "WEEK 09", title: "RAG-based Research Proposal", date: "Sep 7 – Sep 12" },
-            10: { week: "WEEK 10", title: "Building a Reliable Data Collection", date: "Sep 14 – Sep 19" },
-            11: { week: "WEEK 11", title: "Final Project Presentation", date: "Sep 21 – Sep 26" },
-            12: { week: "WEEK 12", title: "Data Chunking with Midterm Exam", date: "Sep 28 – Oct 03" },
-            13: { week: "WEEK 13", title: "Midterm Exam", date: "Oct 5 – Oct 10" }
+            9: {
+                title: "WW-M1: Prelim Portfolio (Update)",
+                date: "",
+                description: "This output documents the updates I made to my Prelim ePortfolio. It presents how I organized my completed academic activities and improved the presentation of my portfolio throughout the Preliminary Term.",
+                reflection: "Working on my Prelim ePortfolio gave me the opportunity to look back on the activities and assessments I completed during the term. By compiling my academic outputs, I was able to see the progress I made and better understand the lessons and skills I gained from each activity.\n\nI also realized that keeping an ePortfolio updated makes it easier to manage and present my academic work. It serves as a record of my learning journey, allowing me to keep track of my accomplishments and areas where I can still improve. This experience encouraged me to continue documenting my future activities and use my ePortfolio to present my development throughout the course."
+            },
+            10: {
+                title: "Lab Exercise WW-M2: Proposal",
+                date: "September 29, 2026",
+                author: "Beatrice Matilda D. Bartolome, Maria Cristina Balneg, Lyona Yvonne Sayat",
+                description: "This activity presents our group's research proposal for LinkWise, a RAG-based digital safety guidance chatbot designed to help students understand unfamiliar and potentially suspicious URLs. It includes the background of the proposed study, its connection to Sustainable Development Goal 4, the research problem, initial knowledge-base sources, research question, and proposed language model.",
+                reflection: "Completing this activity helped me understand the different considerations involved in preparing a research proposal. Through our group work, I gained experience in discussing our ideas, arranging the important details, and making sure that our proposed project had a clear purpose. It also showed me how sharing ideas and listening to others can help improve the overall direction of a research project.\n\nI realized that preparing a proposal requires careful organization because it guides the work that needs to be done in the following stages. This experience helped me improve my ability to organize information, explain project ideas, and work with others toward a common goal. These are important skills that I can continue developing in our upcoming academic projects."
+            },
+            11: {
+                title: "WW-M2 Extension (Updated Proposal)",
+                date: "September 29, 2026",
+                author: "Beatrice Matilda D. Bartolome, Maria Cristina Balneg, Lyona Yvonne Sayat",
+                description: "This output presents the updated version of our group's research proposal, which focuses on developing a RAG-based chatbot for accessing National Privacy Commission (NPC) complaint procedure information. The revised proposal further develops the research direction, including the selected problem, research question, initial knowledge-base sources, evaluation plan, and proposed language model. It also explains how the chatbot may help users access and understand official NPC information through retrieved documents.",
+                reflection: "Developing this research proposal helped me see how important it is to organize ideas and carefully prepare each part of a research document. Through our group's work, I learned that a proposal needs to present the research topic, objectives, and planned approach in a clear and understandable way. It also gave me an opportunity to contribute to improving our group's output.\n\nI realized that preparing a research proposal requires attention to detail and cooperation among group members. Each part needs to support the main direction of the study so that the proposed project remains focused and understandable. This experience improved my understanding of research preparation and the value of teamwork when completing academic requirements."
+            },
+            12: {
+                title: "Midterm Long Quiz & Examination",
+                date: "October 5, 2026",
+                description: "This activity documents my participation in the Midterm Long Quiz and Examination as part of the academic assessments for the Midterm period.",
+                reflection: "The Midterm Long Quiz and Examination gave me an opportunity to evaluate my understanding of the lessons discussed during the term. Preparing for these assessments encouraged me to review my notes, recall important concepts, and focus on the topics covered in class. These experiences reminded me of the importance of consistent preparation and understanding the lessons rather than simply memorizing information.\n\nAfter receiving my blue book, I was able to look back on my examination and review my answers. This gave me a chance to reflect on my performance, recognize the topics I understood, and identify areas that still need improvement. Overall, these assessments helped me become more aware of my learning progress and the knowledge I gained during the Midterm period."
+            },
         };
 
         const weekNumber = Number(new URLSearchParams(window.location.search).get("week"));
         const activity = activities[weekNumber] || activities[7];
-        document.title = `${activity.week} | Academic E-Portfolio`;
-        document.querySelector(".midterm-kicker").textContent = activity.week;
+        document.title = `${activity.title || "Midterm Activity"} | Academic E-Portfolio`;
         document.getElementById("activity-title").textContent = activity.title;
         document.getElementById("activity-date").textContent = activity.date;
+        if (activity.author) {
+            document.getElementById("author-name").textContent = activity.author;
+        }
         if (weekNumber === 8) {
             document.getElementById("activity-description").textContent = activity.description;
             document.getElementById("week-8-outputs").hidden = false;
+            document.getElementById("week-8-reflection").hidden = false;
+            document.getElementById("reflection-text").textContent = activity.reflection;
+        }
+        if (weekNumber === 9) {
+            document.getElementById("activity-description").textContent = activity.description;
+            document.getElementById("week-9-outputs").hidden = false;
+            document.getElementById("week-8-reflection").hidden = false;
+            document.getElementById("reflection-text").textContent = activity.reflection;
+        }
+        if (weekNumber === 10) {
+            document.getElementById("activity-description").textContent = activity.description;
+            document.getElementById("week-10-outputs").hidden = false;
+            document.getElementById("week-8-reflection").hidden = false;
+            document.getElementById("reflection-text").textContent = activity.reflection;
+        }
+        if (weekNumber === 11) {
+            document.getElementById("activity-description").textContent = activity.description;
+            document.getElementById("week-11-outputs").hidden = false;
+            document.getElementById("week-8-reflection").hidden = false;
+            document.getElementById("reflection-text").textContent = activity.reflection;
+        }
+        if (weekNumber === 12) {
+            document.getElementById("activity-description").textContent = activity.description;
+            document.getElementById("week-12-outputs").hidden = false;
             document.getElementById("week-8-reflection").hidden = false;
             document.getElementById("reflection-text").textContent = activity.reflection;
         }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCX Preview</title>
+    <script src="https://unpkg.com/docx-preview@0.3.3/dist/docx-preview.min.js"></script>
+    <style>
+        body { margin: 0; padding: 18px; color: #172033; background: #e5e7eb; font: 14px/1.5 "Segoe UI", Arial, sans-serif; }
+        #status { color: #334155; }
+        #preview { max-width: 850px; margin: 0 auto; padding: 24px; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.2); }
+    </style>
+</head>
+<body>
+    <p id="status">Loading document preview...</p>
+    <main id="preview"></main>
+    <script>
+        fetch("Files/ByteGuard_IEEE%20(1).docx")
+            .then((response) => {
+                if (!response.ok) throw new Error("The document preview could not be loaded.");
+                return response.arrayBuffer();
+            })
+            .then((buffer) => {
+                docx.renderAsync(buffer, document.getElementById("preview"));
+                document.getElementById("status").remove();
+            })
+            .catch((error) => {
+                document.getElementById("status").textContent = error.message;
+            });
+    </script>
+</body>
+</html>

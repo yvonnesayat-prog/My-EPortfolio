@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ITC-C508 Lab Exercise WW1 and WW2 | Academic E-Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="finals.css">
+    <style>
+        .detail-panel p { white-space: pre-line; }
+        .authors { color: #cbd5e1; margin: 0; }
+        .submission-image { display: block; width: 100%; height: auto; margin: 18px 0 12px; border: 1px solid #2c4962; border-radius: 9px; }
+        .output-block { min-height: 0; }
+        .output-block h2 { margin-top: 0; }
+        .output-block h3 { margin: 28px 0 10px; color: #e2e8f0; font-size: 16px; }
+        .file-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 18px; }
+        .document-link { display: inline-block; padding: 9px 13px; border: 1px solid #38bdf8; border-radius: 5px; color: #7dd3fc; font-size: 13px; font-weight: 700; text-decoration: none; }
+        .document-link:hover, .document-link:focus-visible { background: #38bdf8; color: #07111f; }
+        .notebook-links { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin: 10px 0 18px; }
+        .notebook-file-link, .notebook-colab-link { color: #38bdf8; font-size: 18px; font-weight: 800; text-decoration: none; }
+        .notebook-file-link:hover, .notebook-file-link:focus-visible, .notebook-colab-link:hover, .notebook-colab-link:focus-visible { color: #7dd3fc; text-decoration: underline; }
+        .pdf-preview { width: 100%; height: 720px; margin: 8px 0 10px; border: 1px solid #2c4962; border-radius: 9px; background: #fff; }
+        .reflection { min-height: 0; }
+        .reflection p { margin: 0 0 14px; }
+        .reflection p:last-child { margin-bottom: 0; }
+        @media (max-width: 600px) {
+            .pdf-preview { height: 500px; }
+        }
+    </style>
+</head>
+<body class="finals-body">
+    <header class="finals-nav">
+        <a class="finals-logo" href="../index.html">YVONNE<span>.</span></a>
+        <nav aria-label="Primary navigation">
+            <a href="../index.html">Home</a>
+            <a href="Finals.html">Finals</a>
+        </nav>
+    </header>
+
+    <main class="activity-page">
+        <div class="detail-top">
+            <div class="detail-heading">
+                <h1>ITC-C508 Lab Exercise WW1 and WW2 (Optimization and GPU Testing)</h1>
+                <a class="back-button" href="Finals.html">← Back</a>
+            </div>
+            <p class="detail-date">October 31, 2026</p>
+        </div>
+
+        <article class="detail-panel">
+            <p>This activity presents our group's experiments on optimizing a RAG-based chatbot using different configurations and testing its performance on CPU and GPU. The experiments focused on comparing chunk sizes, chunk overlap, and retrieval settings to understand how these parameters affect processing time and response performance. The activity also involved collecting experimental results, analyzing performance differences, and documenting our findings.</p>
+
+            <p class="author"><strong>Authors:</strong></p>
+            <p class="authors">Beatrice Matilda D. Bartolome<br>Maria Cristina Balneg<br>Lyona Yvonne Sayat</p>
+
+            <section class="output-block">
+                <h2>Submitted Outputs</h2>
+
+                <img class="submission-image" src="Files/ww1-ww2-submission.png" alt="Microsoft Teams submission for the ITC-C508 Lab Exercise WW1 and WW2 assignment">
+
+                <h3>Excel Results File</h3>
+                <div class="notebook-links">
+                    <a class="notebook-file-link" href="Files/ByteGuard_RAG_Experiment_Results%282%29.xlsx" download>ByteGuard_RAG_Experiment_Results(2).xlsx ↓</a>
+                    <a class="notebook-colab-link" href="https://docs.google.com/spreadsheets/d/1XOeoP5HEthj5OnzWUH008n8SlzjqOoiqHqCL-2CX-XI/edit?usp=sharing" target="_blank" rel="noopener">Open in Google Sheets ↗</a>
+                </div>
+
+                <h3>Google Colab Notebook</h3>
+                <div class="notebook-links">
+                    <a class="notebook-file-link" href="Files/ByteGuard_RAG_Experiment_Notebook%281%29.ipynb" download>ByteGuard_RAG_Experiment_Notebook(1).ipynb ↓</a>
+                    <a class="notebook-colab-link" href="https://colab.research.google.com/drive/1bAZtqgJiNH4sab8bcI8j3M-Hag8yArkm?usp=sharing" target="_blank" rel="noopener">Open in Google Colab ↗</a>
+                </div>
+
+                <h3>IEEE Research Report</h3>
+                <iframe class="pdf-preview" src="Files/ByteGuard_RAG_Experiment_Report%281%29.pdf" title="ByteGuard RAG Experiment IEEE Research Report" loading="lazy"></iframe>
+                <div class="file-actions">
+                    <a class="document-link" href="Files/ByteGuard_RAG_Experiment_Report%281%29.pdf" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>
+                    <a class="document-link" href="Files/ByteGuard_RAG_Experiment_Report%281%29.pdf" download>Download PDF ↓</a>
+                </div>
+            </section>
+
+            <section class="reflection">
+                <h2>Learning Reflection</h2>
+                <p>Through this activity, I learned how testing and optimization can help improve the performance of a RAG-based chatbot. I realized that it is not enough for a system to provide the expected answers. Its speed, performance, and use of computer resources should also be considered when checking how well it works.</p>
+                <p>Our work with ByteGuard also gave me a better understanding of how teamwork helps when completing technical experiments. Sharing responsibilities and keeping our results organized made it easier to work on the different parts of the activity. I also saw how proper documentation helps us keep track of the work we have completed.</p>
+                <p>Overall, this experience helped me learn more about testing chatbot performance, improving system efficiency, and working with group members on technical tasks.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="finals-footer"><p>© 2026 Lyona Yvonne Sayat | Academic E-Portfolio</p></footer>
+
+</body>
+</html>
