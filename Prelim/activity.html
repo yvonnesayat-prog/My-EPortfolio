@@ -43,6 +43,11 @@
         .pdf-preview { width: 100%; height: 680px; margin: 18px 0 28px; border: 1px solid #2c4962; border-radius: 9px; background: #fff; }
         .document-link { display: inline-block; margin: 5px 10px 10px 0; color: #7dd3fc; font-weight: 700; text-decoration: none; }
         .document-link:hover { color: #38bdf8; text-decoration: underline; }
+        .file-card { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
+        .file-card h3 { margin: 0; color: #e2e8f0; font-size: 16px; }
+        .file-card strong { color: #e2e8f0; font-size: 16px; }
+        .file-link { color: #38bdf8; font-weight: 700; text-decoration: none; }
+        .file-link:hover { color: #7dd3fc; text-decoration: underline; }
         .reflection { margin-top: 34px; padding: 20px 24px; border-left: 3px solid #38bdf8; background: rgba(56,189,248,.07); }
         .reflection h2 { margin-top: 0; }
         .reflection p { margin-bottom: 14px; }
@@ -72,7 +77,6 @@
     </header>
     <main class="activity-page">
         <div class="detail-top">
-            <p class="prelim-kicker" id="week-label">PRELIM TERM</p>
             <div class="detail-heading">
                 <h1 id="activity-title">Activity Output</h1>
                 <a class="back-button" href="Prelim.html">← Back</a>
@@ -87,7 +91,7 @@
             1: {
                 week: "WEEK 01", date: "July 17, 2026", title: "WW-P1: ePortfolio – Readings and Expectations",
                 description: "This output shows my initial work and understanding of the ePortfolio requirements. It helped me understand how the ePortfolio should be organized and what outputs and reflections should be included.",
-                images: [["Screenshots/week01-ww-p1.png", "Week 1 ePortfolio Readings and Expectations submission screenshot"]],
+                images: [["Screenshots/week01-ww-p1.png", "Week 1 ePortfolio Readings and Expectations submission screenshot", "Microsoft Teams Submission Screenshot"]],
                 reflection: [
                     "During Week 1, I learned the importance of creating an ePortfolio to organize and present my academic work. At first, I found it challenging to arrange the pages and choose a clean design. I also had to make sure that the navigation, layout, text, and multimedia were easy to understand and use.",
                     "This activity helped me realize that an ePortfolio is not only for submitting requirements but also for showing my skills, progress, and learning experiences. I improved my organization, creativity, and digital skills. Moving forward, I will continue improving my ePortfolio by adding more meaningful outputs and reflections throughout the course."
@@ -96,7 +100,7 @@
             2: {
                 week: "WEEK 02", date: "July 23, 2026", title: "WW-P2: Introduction to NLP Concepts",
                 description: "This output presents my introduction to Natural Language Processing (NLP) concepts and basic NLP research. It helped me understand how computers can process and work with human language and gave me a better understanding of the importance of NLP in different applications.",
-                images: [["Screenshots/WW-P2_Introduction to NLP Concepts.png", "Week 2 Introduction to NLP Concepts activity"], ["Screenshots/Module Completed_SAYAT.png", "Week 2 Microsoft Learn Module Completion"]],
+                images: [["Screenshots/WW-P2_Introduction to NLP Concepts.png", "Week 2 Introduction to NLP Concepts activity", "Microsoft Teams Submission Screenshot"], ["Screenshots/Module Completed_SAYAT.png", "Week 2 Microsoft Learn Module Completion", "Module Completed_SAYAT"]],
                 documents: [["Files/Microsoft-Learn-Transcript..pdf", "Microsoft Learn Transcript"], ["Files/WW-P2-NLP-Concepts.pdf", "WW-P2: Introduction to NLP Concepts"]],
                 reflection: [
                     "In the Week 2 activity, I learned the basic concepts of Natural Language Processing (NLP) through the Microsoft Learn module. At first, I only knew that NLP was related to AI and language. Through the activities, I learned how AI can summarize text, detect languages, and identify personal information. I also learned about tokenization, TF-IDF, word embeddings, and context vectors.",
@@ -106,7 +110,7 @@
             3: {
                 week: "WEEK 03", date: "July 30, 2026", title: "Exercise PT-P1: Deep Learning (Neural Networks)",
                 description: "This output shows my work on deep learning and neural networks. It helped me understand how a neural network can be trained and tested and how the results can be evaluated using accuracy.",
-                images: [["Screenshots/week03-submission.png", "Week 3 Microsoft Teams Classwork submission screenshot"], ["Screenshots/week03-model.png", "Week 3 trained machine learning model from Machine Learning for Kids"]],
+                images: [["Screenshots/week03-submission.png", "Week 3 Microsoft Teams Classwork submission screenshot", "Microsoft Teams Submission Screenshot"], ["Screenshots/week03-model.png", "Week 3 trained machine learning model from Machine Learning for Kids", "Exercise PTP1 – SAYAT"]],
                 documents: [["Files/Exercise PT_P1_SAYAT.pdf", "Exercise PT_P1_SAYAT.pdf", "pdf"], ["Files/Exercise PTP1_SAYAT.xlsx", "Exercise PTP1_SAYAT.xlsx", "file"]],
                 reflection: [
                     "Learning about machine learning through this activity helped me understand how a model can learn from examples. I created a text classification model that could identify customer feedback as Positive_Praise, Negative_Complaint, or Urgent_Support.",
@@ -117,8 +121,12 @@
             4: {
                 week: "WEEK 04", date: "August 5, 2026", title: "PT-P2: Neural Network Training and Testing (HyperParameters)",
                 description: "This output shows my work on neural network training and testing using different hyperparameters. It helped me understand how hyperparameters can affect the training and testing process and how the results can be evaluated.",
-                images: [["Screenshots/week04-submission.png", "Week 4 Microsoft Teams Classwork submission screenshot"]],
-                documents: [["Files/Lyona Yvonne_FFBP_Training_Log_Template.xlsx", "Lyona Yvonne_FFBP_Training_Log_Template.xlsx", "file"], ["Files/Lyona_Yvonne_Neural_Network_Training_Testing_ipynb.ipynb", "Lyona_Yvonne_Neural_Network_Training_Testing_ipynb.ipynb", "file"], ["Files/Lyona Yvonne_IEEE_Report.pdf", "Lyona Yvonne_IEEE_Report.pdf", "pdf"]],
+                images: [["Screenshots/week04-submission.png", "Week 4 Microsoft Teams Classwork submission screenshot", "Microsoft Teams Submission Screenshot"]],
+                externalOutputs: [
+                    ["Google Colab Notebook", "PT_P2_Sayat_Lyona.ipynb", "https://colab.research.google.com/drive/10dBgz9UkvPyRlUWKntfNB5JlOUPYW1h_?usp=sharing", "Open in Google Colab ↗"],
+                    ["Google Sheets Results", "PT_P2_HyperParameters_Results", "https://docs.google.com/spreadsheets/d/1UzsgAjy5KKbQKAAPo5PjIyU-SWyjbmTXQRiTYpvIPPU/edit?usp=sharing", "Open in Google Sheets ↗"]
+                ],
+                documents: [["Files/Lyona Yvonne_IEEE_Report.pdf", "Lyona Yvonne_IEEE_Report.pdf", "pdf"]],
                 reflection: [
                     "This activity helped me understand how a neural network learns from training data and makes predictions. I worked with a text classification model that was tested using different settings such as learning rate, hidden neurons, dropout, and training data.",
                     "At first, I found it difficult to understand why the model could perform differently even when the same type of task was used. By testing different experiments, I learned about underfitting and overfitting and how they can affect the model.",
@@ -146,18 +154,25 @@
         const weekNumber = Number(params.get("week"));
         const activity = activities[weekNumber] || activities[1];
         document.title = `${activity.title} | Academic E-Portfolio`;
-        document.getElementById("week-label").textContent = activity.week;
         document.getElementById("activity-title").textContent = activity.title;
         document.getElementById("activity-date").textContent = activity.date;
         const content = document.getElementById("activity-content");
         let html = `<p>${activity.description}</p><p class="author"><strong>Author:</strong> Lyona Yvonne Sayat</p>`;
         if (activity.images) {
             html += `<div class="output-block"><h2>Submitted Outputs</h2>`;
-            activity.images.forEach(([src, alt]) => { html += `<img class="detail-image" src="${src}" alt="${alt}">`; });
+            activity.images.forEach(([src, alt, heading]) => {
+                if (heading) html += `<h3>${heading}</h3>`;
+                html += `<img class="detail-image" src="${src}" alt="${alt}">`;
+            });
             html += `</div>`;
         }
         if (activity.documents) {
             html += activity.images ? `<div class="output-block">` : `<div class="output-block"><h2>Submitted Outputs</h2>`;
+            if (activity.externalOutputs) {
+                activity.externalOutputs.forEach(([title, filename, url, openLabel]) => {
+                    html += `<div class="file-card"><h3>${title}</h3><a class="file-link" href="${url}" target="_blank" rel="noopener">${filename} ↧</a><a class="file-link" href="${url}" target="_blank" rel="noopener">${openLabel}</a></div>`;
+                });
+            }
             activity.documents.forEach(([src, label, type = "pdf"]) => {
                 if (type === "pdf") {
                     html += `<h3>${label}</h3><iframe class="pdf-preview" src="${src}" title="${label}" loading="lazy"></iframe><a class="document-link" href="${src}" target="_blank" rel="noopener">Open PDF in New Tab ↗</a>`;
